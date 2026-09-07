@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: sedlon10-blip/drpristav-web
   branch: main
 
 media_folder: "realizace"
