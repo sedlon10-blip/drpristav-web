@@ -2,6 +2,8 @@ backend:
   name: github
   repo: sedlon10-blip/drpristav-web
   branch: main
+  base_url: https://drpristav-02.netlify.app
+  auth_endpoint: /.netlify/git/github
 
 media_folder: "realizace"
 public_folder: "realizace"
@@ -31,8 +33,8 @@ collections:
           - {label: "Ostatní", value: "ostatni"}
       - {label: "Datum dokončení", name: "datum", widget: "string", hint: "Např: Září 2024"}
       - {label: "Krátký popis", name: "popis", widget: "text", hint: "1-2 věty o projektu"}
-      - {label: "Podrobnosti", name: "detail", widget: "text", required: false, hint: "Technické detaily, zajímavosti"}
-      - {label: "Hlavní fotka", name: "hero", widget: "image", hint: "Nejlepší fotka — zobrazí se jako první"}
+      - {label: "Podrobnosti", name: "detail", widget: "text", required: false}
+      - {label: "Hlavní fotka", name: "hero", widget: "image"}
       - label: "Další fotky"
         name: "galerie"
         widget: "list"
