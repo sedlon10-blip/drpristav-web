@@ -186,6 +186,23 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
   .form-row{grid-template-columns:1fr}
   footer{flex-direction:column;gap:16px;padding:24px}
 }
+
+@media(max-width:768px){
+  .ref-grid{grid-template-columns:repeat(2,1fr)!important}
+  .hero{height:50vh!important;min-height:280px!important}
+  .hero-content{padding:0 20px!important}
+  .hero-title{font-size:clamp(28px,8vw,48px)!important}
+  .section{padding:48px 20px!important}
+  .section-title{font-size:clamp(28px,7vw,48px)!important}
+  .svc-grid{grid-template-columns:repeat(2,1fr)!important}
+  nav{padding:0 20px!important}
+  .onas{flex-direction:column!important;padding:48px 20px!important}
+  .partners-grid{grid-template-columns:repeat(2,1fr)!important}
+}
+@media(max-width:480px){
+  .ref-grid{grid-template-columns:1fr 1fr!important}
+  .svc-grid{grid-template-columns:1fr!important}
+}
 </style>
 </head>
 <body>
@@ -470,18 +487,6 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
       <img src="realizace/mukarov_a.jpg" alt="Hrubá stavba Mukařov" loading="lazy">
       <div class="ref-overlay"><div class="ref-cat">Hrubá stavba</div><div class="ref-name">Mukařov</div><div class="ref-desc">Patrový dvojdům Porotherm — od základů po hotovou fasádu a podlahy</div></div>
     </div>
-    <div class="ref-item" data-cat="hrube" onclick="openLB('images/nastavba.jpg')">
-      <img src="images/nastavba.jpg" alt="Základová deska Čím" loading="lazy">
-      <div class="ref-overlay"><div class="ref-cat">Základová deska</div><div class="ref-name">Čím</div><div class="ref-desc">Železobetonová stropní deska s výztuží a bednění</div></div>
-    </div>
-    <div class="ref-item" data-cat="hrube" onclick="openLB('images/ujezd.jpg')">
-      <img src="images/ujezd.jpg" alt="Hrubá stavba Újezd" loading="lazy">
-      <div class="ref-overlay"><div class="ref-cat">Hrubá stavba</div><div class="ref-name">Újezd</div><div class="ref-desc">Přízemní hrubá stavba s hydroizolací a osazením překladů</div></div>
-    </div>
-    <div class="ref-item" data-cat="hrube" onclick="openLB('images/oton_b.jpg')">
-      <img src="images/oton_b.jpg" alt="Bungalov Oton" loading="lazy">
-      <div class="ref-overlay"><div class="ref-cat">Hrubá stavba</div><div class="ref-name">Oton</div><div class="ref-desc">Jednopodlažní bungalov ve výstavbě, kompletní hrubá stavba</div></div>
-    </div>
     <div class="ref-item" data-detail="1" data-cat="hrube" onclick="window.location.href='realizace/senohraby.html'">
       <img src="realizace/senohraby_a.jpg" alt="Přístavba Senhohraby" loading="lazy">
       <div class="ref-overlay"><div class="ref-cat">Přístavba</div><div class="ref-name">Senohraby</div><div class="ref-desc">Přístavba z ytongu, dřevěné krovy, krytina Lindab</div></div>
@@ -490,53 +495,17 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
       <img src="images/zerhovice.jpg" alt="Žerhovice" loading="lazy">
       <div class="ref-overlay"><div class="ref-cat">Hrubá stavba</div><div class="ref-name">Žerhovice</div><div class="ref-desc">Zdicí práce a překlady, detail rohového napojení</div></div>
     </div>
-    <div class="ref-item" data-cat="hrube" onclick="openLB('images/zdice2.jpg')">
-      <img src="images/zdice2.jpg" alt="Zdice detail" loading="lazy">
-      <div class="ref-overlay"><div class="ref-cat">Hrubá stavba</div><div class="ref-name">Zdice II</div><div class="ref-desc">Pracovní záběr z výstavby, zdění porotherm bloků</div></div>
-    </div>
     <div class="ref-item" data-cat="rekonstrukce" data-detail="1" onclick="window.location.href='realizace/barrandov-rd.html'">
       <img src="realizace/barrandov-rd_hero.jpg" alt="Rekonstrukce RD Barrandov" loading="lazy">
       <div class="ref-overlay"><div class="ref-cat">Rekonstrukce & dlažba</div><div class="ref-name">Barrandov</div><div class="ref-desc">Rekonstrukce RD, zámková dlažba vjezdu a kovové oplocení</div></div>
-    </div>
-    <div class="ref-item" data-cat="rekonstrukce" onclick="openLB('images/palma.jpg')">
-      <img src="images/palma.jpg" alt="Rekonstrukce Palma" loading="lazy">
-      <div class="ref-overlay"><div class="ref-cat">Rekonstrukce bytu</div><div class="ref-name">Palma</div><div class="ref-desc">Kompletní rekonstrukce bytu — podlahy, omítky, okna</div></div>
     </div>
     <div class="ref-item" data-cat="rekonstrukce" data-detail="1" onclick="window.location.href='realizace/deinstalace-benesov.html'">
       <img src="images/deinstalace.jpg" alt="Demolice střechy" loading="lazy">
       <div class="ref-overlay"><div class="ref-cat">Demolice & rekonstrukce</div><div class="ref-name">Deinstalace střechy</div><div class="ref-desc">Demolice staré střechy, příprava na kompletní rekonstrukci domu</div></div>
     </div>
-    <div class="ref-item" data-cat="rekonstrukce" onclick="openLB('images/tuklaty.jpg')">
-      <img src="images/tuklaty.jpg" alt="Rekonstrukce Tuklaty" loading="lazy">
-      <div class="ref-overlay"><div class="ref-cat">Rekonstrukce</div><div class="ref-name">Tuklaty</div><div class="ref-desc">Kompletní rekonstrukce interiéru rodinného domu</div></div>
-    </div>
-    <div class="ref-item" data-cat="rekonstrukce" onclick="openLB('images/karlin_a.jpg')">
-      <img src="images/karlin_a.jpg" alt="Karlín bytové jádro" loading="lazy">
-      <div class="ref-overlay"><div class="ref-cat">Rekonstrukce bytového jádra</div><div class="ref-name">Karlín</div><div class="ref-desc">Kompletní rekonstrukce bytového jádra v Praze Karlín</div></div>
-    </div>
-    <div class="ref-item" data-cat="koupelny" onclick="openLB('images/kaspar.jpg')">
-      <img src="images/kaspar.jpg" alt="Obklady Kašpar" loading="lazy">
-      <div class="ref-overlay"><div class="ref-cat">Koupelna & obklady</div><div class="ref-name">Kašpar</div><div class="ref-desc">Pokládka velkoformátových obkladů a dlažby v koupelně</div></div>
-    </div>
-    <div class="ref-item" data-cat="koupelny" onclick="openLB('images/beroun.jpg')">
-      <img src="images/beroun.jpg" alt="Beroun koupelna" loading="lazy">
-      <div class="ref-overlay"><div class="ref-cat">Koupelna & instalace</div><div class="ref-name">Beroun</div><div class="ref-desc">Instalace bojleru a kompletní dokončení koupelny s obklady</div></div>
-    </div>
-    <div class="ref-item" data-cat="instalace" onclick="openLB('images/hunc.jpg')">
-      <img src="images/hunc.jpg" alt="Instalatérské práce Hunč" loading="lazy">
-      <div class="ref-overlay"><div class="ref-cat">Instalatérské práce</div><div class="ref-name">Hunč</div><div class="ref-desc">Kompletní rozvody kanalizace a vodoinstalace</div></div>
-    </div>
     <div class="ref-item" data-cat="hrube" data-detail="1" onclick="window.location.href='realizace/pocernice-nastavba.html'">
       <img src="realizace/pocernice-nastavba_hero.jpg" alt="Nástavba Dolní Počernice" loading="lazy">
       <div class="ref-overlay"><div class="ref-cat">Nástavba</div><div class="ref-name">Dolní Počernice</div><div class="ref-desc">Nástavba nového patra rodinného domu, zdicí práce</div></div>
-    </div>
-    <div class="ref-item" data-cat="drobne" onclick="openLB('images/koza.jpg')">
-      <img src="images/koza.jpg" alt="Dlažba Koza" loading="lazy">
-      <div class="ref-overlay"><div class="ref-cat">Venkovní dlažba</div><div class="ref-name">Koza</div><div class="ref-desc">Terrakotová dlažba komerčního objektu se zakřiveným nájezdem</div></div>
-    </div>
-    <div class="ref-item" data-cat="drobne" onclick="openLB('images/jascik.jpg')">
-      <img src="images/jascik.jpg" alt="Schodiště Jašík" loading="lazy">
-      <div class="ref-overlay"><div class="ref-cat">Schodiště & dlažba</div><div class="ref-name">Jašík</div><div class="ref-desc">Nové betonové schodiště a zámková dlažba před domem</div></div>
     </div>
     <div class="ref-item" data-cat="rekonstrukce" data-detail="1" onclick="window.location.href='realizace/roztoky.html'">
       <img src="realizace/roztoky_hero.jpg" alt="Rekonstrukce bytu Roztoky" loading="lazy">
@@ -614,7 +583,7 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
       <div style="display:flex;align-items:center;gap:12px">
         <div style="width:40px;height:40px;border-radius:50%;background:var(--mech);display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;color:#fff;flex-shrink:0">R</div>
         <div>
-          <div style="font-weight:600;font-size:14px;color:var(--grafit)">Rare Malware</div>
+          <div style="font-weight:600;font-size:14px;color:var(--grafit)">Rare M.</div>
           <div style="font-size:11px;color:var(--beton)">před 6 měsíci</div>
         </div>
         <div style="margin-left:auto;color:#FBBC04;font-size:14px">★★★★★</div>
@@ -626,7 +595,7 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
       <div style="display:flex;align-items:center;gap:12px">
         <div style="width:40px;height:40px;border-radius:50%;background:var(--mech);display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;color:#fff;flex-shrink:0">L</div>
         <div>
-          <div style="font-weight:600;font-size:14px;color:var(--grafit)">Ladislav Horák</div>
+          <div style="font-weight:600;font-size:14px;color:var(--grafit)">Ladislav H.</div>
           <div style="font-size:11px;color:var(--beton)">před 7 měsíci</div>
         </div>
         <div style="margin-left:auto;color:#FBBC04;font-size:14px">★★★★★</div>
@@ -638,7 +607,7 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
       <div style="display:flex;align-items:center;gap:12px">
         <div style="width:40px;height:40px;border-radius:50%;background:var(--mech);display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;color:#fff;flex-shrink:0">A</div>
         <div>
-          <div style="font-weight:600;font-size:14px;color:var(--grafit)">Adam Kašpar</div>
+          <div style="font-weight:600;font-size:14px;color:var(--grafit)">Adam K.</div>
           <div style="font-size:11px;color:var(--beton)">před 8 měsíci</div>
         </div>
         <div style="margin-left:auto;color:#FBBC04;font-size:14px">★★★★★</div>
@@ -650,7 +619,7 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
       <div style="display:flex;align-items:center;gap:12px">
         <div style="width:40px;height:40px;border-radius:50%;background:var(--mech);display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;color:#fff;flex-shrink:0">Š</div>
         <div>
-          <div style="font-weight:600;font-size:14px;color:var(--grafit)">Šimon Záhorovský</div>
+          <div style="font-weight:600;font-size:14px;color:var(--grafit)">Šimon Z.</div>
           <div style="font-size:11px;color:var(--beton)">před 8 měsíci</div>
         </div>
         <div style="margin-left:auto;color:#FBBC04;font-size:14px">★★★★★</div>
@@ -662,7 +631,7 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
       <div style="display:flex;align-items:center;gap:12px">
         <div style="width:40px;height:40px;border-radius:50%;background:var(--mech);display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;color:#fff;flex-shrink:0">M</div>
         <div>
-          <div style="font-weight:600;font-size:14px;color:var(--grafit)">Michal Fibrach</div>
+          <div style="font-weight:600;font-size:14px;color:var(--grafit)">Michal F.</div>
           <div style="font-size:11px;color:var(--beton)">Google recenze</div>
         </div>
         <div style="margin-left:auto;color:#FBBC04;font-size:14px">★★★★★</div>
