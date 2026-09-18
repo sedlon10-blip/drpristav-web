@@ -188,20 +188,23 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
 }
 
 @media(max-width:768px){
-  .ref-grid{grid-template-columns:repeat(2,1fr)!important}
+  nav{padding:0 16px!important}
   .hero{height:50vh!important;min-height:280px!important}
   .hero-content{padding:0 20px!important}
-  .hero-title{font-size:clamp(28px,8vw,48px)!important}
+  .hero-title{font-size:clamp(26px,8vw,44px)!important}
   .section{padding:48px 20px!important}
-  .section-title{font-size:clamp(28px,7vw,48px)!important}
+  .section-title{font-size:clamp(26px,7vw,44px)!important}
   .svc-grid{grid-template-columns:repeat(2,1fr)!important}
-  nav{padding:0 20px!important}
+  .ref-grid{grid-template-columns:repeat(2,1fr)!important}
   .onas{flex-direction:column!important;padding:48px 20px!important}
-  .partners-grid{grid-template-columns:repeat(2,1fr)!important}
+  #recenze-grid{grid-template-columns:1fr!important}
+  #partneri-grid{grid-template-columns:repeat(2,1fr)!important}
+  #slider-grid{grid-template-columns:1fr!important;padding:0 20px!important}
+  #ba-wrap{height:260px!important}
 }
 @media(max-width:480px){
-  .ref-grid{grid-template-columns:1fr 1fr!important}
   .svc-grid{grid-template-columns:1fr!important}
+  #partneri-grid{grid-template-columns:repeat(2,1fr)!important}
 }
 </style>
 </head>
@@ -420,7 +423,7 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
 
 <!-- BEFORE/AFTER SLIDER -->
 <section style="background:#1E2020;padding:56px 72px">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;max-width:1200px;margin:0 auto">
+  <div id="slider-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;max-width:1200px;margin:0 auto">
 
     <div id="ba-wrap" style="position:relative;height:360px;overflow:hidden;border-radius:6px;cursor:col-resize;touch-action:none">
       <img src="images/tisice_pred.jpg" alt="Před" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none">
@@ -577,7 +580,7 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
     </div>
   </div>
 
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+  <div id="recenze-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
 
     <div style="background:#fff;border:1px solid #e8e4dc;border-radius:8px;padding:28px 24px;display:flex;flex-direction:column;gap:14px">
       <div style="display:flex;align-items:center;gap:12px">
@@ -698,7 +701,7 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
 <section style="background:#141614;padding:64px 72px;border-top:1px solid rgba(255,255,255,.06)">
   <p style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--mech-s);font-weight:600;margin-bottom:12px">Spolupráce</p>
   <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:40px;text-transform:uppercase;color:var(--kremova);margin-bottom:48px;line-height:1">Naši partneři</h2>
-  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px">
+  <div id="partneri-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px">
 
     <a href="https://www.dek.cz" target="_blank" rel="noopener" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:24px 16px;display:flex;flex-direction:column;align-items:center;gap:14px;text-decoration:none;transition:border-color .2s" onmouseover="this.style.borderColor='rgba(79,138,94,.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
       <div style="width:60px;height:60px;border-radius:50%;background:#e8001d;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;color:white;letter-spacing:-1px">DEK</div>
