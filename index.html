@@ -189,17 +189,21 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
 
 @media(max-width:768px){
   nav{padding:0 16px!important}
-  .hero{height:50vh!important;min-height:280px!important}
-  .hero-content{padding:0 20px!important}
-  .hero-title{font-size:clamp(26px,8vw,44px)!important}
+  .hero{height:auto!important;min-height:380px!important}
+  .hero-content{padding:80px 20px 40px!important}
+  .hero-title{font-size:clamp(26px,8vw,44px)!important;white-space:normal!important}
+  .hero-sub{font-size:14px!important;max-width:100%!important}
+  .hero-actions{flex-wrap:wrap!important}
   .section{padding:48px 20px!important}
   .section-title{font-size:clamp(26px,7vw,44px)!important}
   .svc-grid{grid-template-columns:repeat(2,1fr)!important}
   .ref-grid{grid-template-columns:repeat(2,1fr)!important}
   .onas{flex-direction:column!important;padding:48px 20px!important}
+  .onas-text{max-width:100%!important;overflow:hidden!important}
+  .onas-text h2,.onas-text p,.onas-text .section-label{word-break:break-word!important}
   #recenze-grid{grid-template-columns:1fr!important}
   #partneri-grid{grid-template-columns:repeat(2,1fr)!important}
-  #slider-grid{grid-template-columns:1fr!important;padding:0 20px!important}
+  #slider-grid{grid-template-columns:1fr!important;padding:0 20px!important;gap:32px!important}
   #ba-wrap{height:260px!important}
 }
 @media(max-width:480px){
