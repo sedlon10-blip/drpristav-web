@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hrubá stavba Škvorec — Dr. PřiStav s.r.o.</title>
+<style>
+  :root{--grafit:#1E2020;--kremova:#EAE7E0;--mech:#3D6B4A;--mech-sv:#4F8A5E;--beton:#7A8078;--bila:#F5F3EF}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Barlow',sans-serif;background:#141414;color:var(--kremova)}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:#141414;border-bottom:1px solid #2a2a2a;position:sticky;top:0;z-index:100}
+  .nav-back{color:var(--mech-sv);text-decoration:none;font-size:13px;letter-spacing:0.05em}
+  .nav-logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;color:var(--kremova);text-decoration:none;letter-spacing:0.05em}
+  .hero{width:100%;height:60vh;min-height:380px;object-fit:cover;display:block}
+  .content{max-width:820px;margin:0 auto;padding:56px 32px 80px}
+  .meta{display:flex;gap:24px;margin-bottom:28px;flex-wrap:wrap}
+  .meta-item{display:flex;flex-direction:column;gap:4px}
+  .meta-label{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--beton)}
+  .meta-value{font-size:14px;font-weight:600;color:var(--kremova)}
+  h1{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:52px;text-transform:uppercase;color:var(--kremova);line-height:1;margin-bottom:24px}
+  .desc{font-size:17px;line-height:1.7;color:var(--kremova);opacity:.85;font-weight:500;margin-bottom:28px}
+  .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:48px}
+  .tag{background:#2a2a2a;color:var(--beton);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;padding:6px 12px;border-radius:4px}
+  .gallery-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;color:var(--mech);margin-bottom:20px}
+  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:64px}
+  .gallery-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;cursor:pointer;transition:opacity .2s}
+  .gallery-grid img:hover{opacity:.85}
+  .gallery-grid.single{grid-template-columns:1fr;max-width:480px}
+  .gallery-grid.two-col{grid-template-columns:repeat(2,1fr)}
+  .cta-block{background:var(--grafit);border-radius:12px;padding:48px 40px;text-align:center;border-left:4px solid var(--mech)}
+  .cta-block h2{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:32px;text-transform:uppercase;margin-bottom:12px}
+  .cta-block p{color:var(--beton);margin-bottom:28px}
+  .cta-btn{display:inline-block;background:var(--mech);color:var(--bila);font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;padding:14px 28px;border-radius:4px;text-decoration:none}
+  .lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:999;align-items:center;justify-content:center}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:90vw;max-height:90vh;object-fit:contain;border-radius:6px}
+  .lb-close{position:absolute;top:20px;right:28px;background:none;border:none;color:#fff;font-size:32px;cursor:pointer}
+  @media(max-width:600px){nav{padding:16px 20px} h1{font-size:36px} .content{padding:40px 20px 60px} .gallery-grid{grid-template-columns:repeat(2,1fr)} .gallery-grid.single{max-width:100%}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <a href="../index.html#realizace" class="nav-back">← Zpět na realizace</a>
+    <a href="../index.html" class="nav-logo">Dr. PřiStav</a>
+  </nav>
+<img class="hero" src="../images/oton_b.jpg" alt="Hrubá stavba Škvorec">
+<div class="content">
+  <div class="meta">
+    <div class="meta-item"><div class="meta-label">Kategorie</div><div class="meta-value">Hrubá stavba</div></div>
+    <div class="meta-item"><div class="meta-label">Lokalita</div><div class="meta-value">Škvorec, Středočeský kraj</div></div>
+  </div>
+  <h1>Hrubá stavba Škvorec</h1>
+  <p class="desc">Kompletní hrubá stavba jednopodlažního bungalovu. Zdící práce, překlady, věnce a stropní konstrukce.</p>
+  <div class="tags">
+    <span class="tag">Hrubá stavba</span><span class="tag">Bungalov</span><span class="tag">Porotherm</span><span class="tag">Škvorec</span>
+  </div>
+  <div class="gallery-title">Fotogalerie</div>
+  <div class="gallery-grid two-col">
+    <img src="../images/oton.jpg" alt="Hrubá stavba Škvorec" loading="lazy" onclick="openLB('../images/oton.jpg')">
+    <img src="../images/oton_b.jpg" alt="Hrubá stavba Škvorec" loading="lazy" onclick="openLB('../images/oton_b.jpg')">
+    <img src="../images/oton2_a.jpg" alt="Hrubá stavba Škvorec" loading="lazy" onclick="openLB('../images/oton2_a.jpg')">
+    <img src="../images/oton2_b.jpg" alt="Hrubá stavba Škvorec" loading="lazy" onclick="openLB('../images/oton2_b.jpg')">
+  </div>
+  <div class="cta-block">
+    <h2>Máte podobný projekt?</h2>
+    <p>Rádi si promluvíme o vašem záměru a připravíme nezávaznou nabídku.</p>
+    <a href="../index.html#kontakt" class="cta-btn">Nezávazná konzultace</a>
+  </div>
+</div>
+<div class="lightbox" id="lb" onclick="closeLB()">
+  <button class="lb-close" onclick="closeLB()">×</button>
+  <img id="lb-img" src="" alt="">
+</div>
+<script>
+function openLB(src){document.getElementById('lb-img').src=src;document.getElementById('lb').classList.add('open')}
+function closeLB(){document.getElementById('lb').classList.remove('open')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLB()})
+</script>
+</body>
+</html>
