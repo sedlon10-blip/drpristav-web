@@ -111,7 +111,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .ref-cat{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--mech-s);font-weight:600;margin-bottom:4px}
 .ref-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;text-transform:uppercase;color:var(--kremova);line-height:1;margin-bottom:8px}
 .ref-desc{font-size:12px;line-height:1.5;color:rgba(234,231,224,.7)}
-.ref-item.hidden{display:none}
+.ref-item.hidden,.ref-item.cat-hidden{display:none}
 .ref-item[data-detail]:hover .ref-overlay::after{
   content:'Zobrazit detail →';
   display:block;
@@ -596,6 +596,9 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
     </div>
 
   </div>
+  <div id="ref-more-wrap" style="text-align:center;margin-top:32px">
+    <button id="ref-more-btn" onclick="showMoreRef()" style="font-family:'Barlow',sans-serif;font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--kremova);background:transparent;border:2px solid rgba(255,255,255,.2);padding:14px 36px;border-radius:3px;cursor:pointer;transition:border-color .2s,color .2s" onmouseover="this.style.borderColor='rgba(255,255,255,.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,.2)'">Zobrazit více realizací</button>
+  </div>
 </section>
 
 <!-- O NÁS -->
@@ -797,14 +800,36 @@ function toggleSvc(card){
   if(!isOpen)card.classList.add('open');
 }
 
-// REF FILTER
+// REF FILTER + SHOW MORE
+var REF_VISIBLE = 8;
+var refCurrentCat = 'vse';
+
+function applyRefVisibility(){
+  var items = Array.from(document.querySelectorAll('.ref-item')).filter(i=>!i.classList.contains('cat-hidden'));
+  items.forEach((item,idx)=>item.classList.toggle('hidden', idx >= REF_VISIBLE));
+  var wrap = document.getElementById('ref-more-wrap');
+  if(wrap) wrap.style.display = items.length > REF_VISIBLE ? 'block' : 'none';
+}
+
 function filterRef(cat,btn){
+  refCurrentCat = cat;
+  REF_VISIBLE = 8;
   document.querySelectorAll('.ref-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   document.querySelectorAll('.ref-item').forEach(item=>{
-    item.classList.toggle('hidden',cat!=='vse'&&item.dataset.cat!==cat);
+    item.classList.toggle('cat-hidden', cat!=='vse' && item.dataset.cat!==cat);
+    item.classList.remove('hidden');
   });
+  applyRefVisibility();
 }
+
+function showMoreRef(){
+  REF_VISIBLE += 8;
+  applyRefVisibility();
+}
+
+// Inicializace při načtení
+applyRefVisibility();
 
 // LIGHTBOX
 function openLB(src){document.getElementById('lb-img').src=src;document.getElementById('lb').classList.add('open');document.body.style.overflow='hidden'}
