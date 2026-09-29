@@ -701,6 +701,11 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
     </div>
 
   </div>
+
+  <div style="text-align:center;margin-top:40px">
+    <a href="reference.html" style="display:inline-block;font-family:'Barlow',sans-serif;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--mech);border:2px solid var(--mech);padding:14px 32px;border-radius:3px;text-decoration:none;transition:background .2s,color .2s" onmouseover="this.style.background='var(--mech)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--mech)'">Všechny reference →</a>
+  </div>
+
 </section>
 
 <!-- KONTAKT -->
@@ -836,7 +841,19 @@ function closeLB(){document.getElementById('lb').classList.remove('open');docume
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLB()});
 
 // NAV scroll
-window.addEventListener('scroll',()=>{document.querySelector('nav').style.background=window.scrollY>50?'rgba(20,22,22,.98)':'rgba(30,32,32,.96)'});
+window.addEventListener('scroll',()=>{
+  document.querySelector('nav').style.background=window.scrollY>50?'rgba(20,22,22,.98)':'rgba(30,32,32,.96)';
+  // Floatovací CTA — zobrazí se po odscrollování přes hero
+  var fab=document.getElementById('fab-cta');
+  if(fab) fab.style.opacity=window.scrollY>window.innerHeight*0.8?'1':'0';
+});
 </script>
+
+<!-- Floatovací CTA tlačítko -->
+<a id="fab-cta" href="#kontakt" style="position:fixed;bottom:28px;right:28px;z-index:200;display:flex;align-items:center;gap:10px;background:var(--mech);color:#fff;font-family:'Barlow',sans-serif;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:14px 24px;border-radius:40px;text-decoration:none;box-shadow:0 4px 24px rgba(0,0,0,.4);opacity:0;transition:opacity .4s,background .2s" onmouseover="this.style.background='#4F8A5E'" onmouseout="this.style.background='var(--mech)'">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+  Poptávka zdarma
+</a>
+
 </body>
 </html>

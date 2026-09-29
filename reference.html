@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reference zákazníků — Dr. PřiStav s.r.o.</title>
+<meta name="description" content="Co říkají zákazníci Dr. PřiStav s.r.o. — hodnocení a reference z Google a dalších zdrojů.">
+<style>
+  :root{--grafit:#1E2020;--kremova:#EAE7E0;--mech:#3D6B4A;--mech-sv:#4F8A5E;--beton:#7A8078;--bila:#F5F3EF;--tmava:#141414}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--tmava);color:var(--kremova);font-family:'Barlow',sans-serif;min-height:100vh}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:20px 32px;border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;z-index:50;background:rgba(20,20,20,.96);backdrop-filter:blur(8px)}
+  .nav-back{color:var(--beton);text-decoration:none;font-size:13px;letter-spacing:.05em;transition:color .2s}
+  .nav-back:hover{color:var(--kremova)}
+  .nav-logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;text-transform:uppercase;color:var(--kremova);text-decoration:none;letter-spacing:.02em}
+  .nav-logo span{color:var(--mech)}
+  .nav-cta{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--bila);background:var(--mech);padding:10px 20px;border-radius:3px;text-decoration:none;transition:background .2s}
+  .nav-cta:hover{background:var(--mech-sv)}
+
+  /* HEADER */
+  .page-header{padding:80px 48px 64px;max-width:1200px;margin:0 auto}
+  .page-label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--mech-sv);font-weight:600;margin-bottom:12px}
+  .page-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(42px,6vw,72px);text-transform:uppercase;line-height:.95;color:var(--kremova);margin-bottom:24px}
+  .page-title span{color:var(--mech-sv)}
+  .rating-row{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+  .rating-stars{font-size:28px;color:#FBBC04}
+  .rating-score{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:48px;color:var(--kremova);line-height:1}
+  .rating-label{font-size:13px;color:var(--beton);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+
+  /* REVIEWS GRID */
+  .reviews-section{padding:0 48px 80px;max-width:1200px;margin:0 auto}
+  .reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-bottom:64px}
+  .review-card{background:#1E2020;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:32px 28px;display:flex;flex-direction:column;gap:16px}
+  .review-head{display:flex;align-items:center;gap:14px}
+  .review-avatar{width:44px;height:44px;border-radius:50%;background:var(--mech);display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:#fff;flex-shrink:0}
+  .review-meta{flex:1}
+  .review-name{font-weight:600;font-size:15px;color:var(--kremova)}
+  .review-date{font-size:11px;color:var(--beton);margin-top:2px}
+  .review-stars{color:#FBBC04;font-size:13px}
+  .review-text{font-size:14px;line-height:1.7;color:#aaa}
+  .review-source{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--beton);margin-top:4px}
+
+  /* CTA WRITE REVIEW */
+  .write-review{background:var(--mech);border-radius:10px;padding:40px 36px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;margin-bottom:80px}
+  .write-review-text h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:28px;text-transform:uppercase;color:#fff;margin-bottom:6px}
+  .write-review-text p{font-size:14px;color:rgba(255,255,255,.7);max-width:400px}
+  .write-review-btn{display:inline-block;background:#fff;color:var(--mech);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:14px 28px;border-radius:3px;text-decoration:none;white-space:nowrap;transition:opacity .2s}
+  .write-review-btn:hover{opacity:.9}
+
+  /* FORM SECTION */
+  .form-section{background:#1A1A1A;border-radius:12px;padding:48px 40px;margin-bottom:80px;border:1px solid rgba(255,255,255,.06)}
+  .form-section-label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--mech-sv);font-weight:600;margin-bottom:10px}
+  .form-section-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:36px;text-transform:uppercase;color:var(--kremova);margin-bottom:8px;line-height:1}
+  .form-section-desc{font-size:14px;color:var(--beton);line-height:1.6;max-width:480px;margin-bottom:32px}
+  .form-wrapper{background:var(--bila);border-radius:8px;padding:32px 28px}
+
+  /* FOOTER */
+  footer{padding:32px 48px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+  footer p{font-size:12px;color:var(--beton)}
+  footer a{color:var(--beton);text-decoration:none}
+  footer a:hover{color:var(--kremova)}
+
+  @media(max-width:768px){
+    .page-header{padding:48px 24px 40px}
+    .reviews-section{padding:0 24px 48px}
+    .write-review{padding:28px 24px}
+    .form-section{padding:32px 24px}
+    nav{padding:16px 20px}
+    footer{padding:24px 20px}
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://tally.so/widgets/embed.js"></script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-back">← Zpět na hlavní stránku</a>
+  <a href="index.html" class="nav-logo">Dr. <span>Při</span>Stav</a>
+  <a href="index.html#kontakt" class="nav-cta">Poptávka</a>
+</nav>
+
+<!-- HEADER -->
+<div class="page-header">
+  <p class="page-label">Spokojení zákazníci</p>
+  <h1 class="page-title">Reference<br>a hodnocení</h1>
+  <div class="rating-row">
+    <div class="rating-stars">★★★★★</div>
+    <div class="rating-score">5.0</div>
+    <div>
+      <div class="rating-label">Google hodnocení</div>
+      <div style="font-size:13px;color:var(--beton);margin-top:2px">5 recenzí</div>
+    </div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<div class="reviews-section">
+  <div class="reviews-grid">
+
+    <div class="review-card">
+      <div class="review-head">
+        <div class="review-avatar">R</div>
+        <div class="review-meta">
+          <div class="review-name">Rare M.</div>
+          <div class="review-date">před 6 měsíci</div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+      </div>
+      <p class="review-text">Nové schodiště je udělané poctivě, všechno sedí, nic se nekýve a celé působí mnohem lépe než dřív. Domluva byla korektní, věci se řešily průběžně na místě a finální provedení odpovídá tomu, na čem jsme se domluvili.</p>
+      <div class="review-source">Google recenze</div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-head">
+        <div class="review-avatar">L</div>
+        <div class="review-meta">
+          <div class="review-name">Ladislav H.</div>
+          <div class="review-date">před 7 měsíci</div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+      </div>
+      <p class="review-text">Firma mi realizovala hrubou stavbu a mohu jen doporučit. Perfektní jednání, rychlost a kvalita. Pan Přístaš byl u celé stavby osobně a dohlížel na chod a plynulost provedení. Veškeré dotazy ihned řešil. Určitě doporučuji všem, kteří chtějí mít hotovou práci bez problémů, rychle a hlavně kvalitně.</p>
+      <div class="review-source">Google recenze</div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-head">
+        <div class="review-avatar">A</div>
+        <div class="review-meta">
+          <div class="review-name">Adam K.</div>
+          <div class="review-date">před 8 měsíci</div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+      </div>
+      <p class="review-text">Stavební firma na vysoké úrovni. Vše proběhlo hladce od začátku do konce. S panem Přístašem je skvělá domluva a vždy najdete společné řešení.</p>
+      <div class="review-source">Google recenze</div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-head">
+        <div class="review-avatar">Š</div>
+        <div class="review-meta">
+          <div class="review-name">Šimon Z.</div>
+          <div class="review-date">před 8 měsíci</div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+      </div>
+      <p class="review-text">Spolehlivá stavební firma s lidským a osobitým přístupem s férovými cenami na momentálním trhu. Majitel je pracovitý a sympaťák s šikovnými zaměstnanci, vřele doporučuji.</p>
+      <div class="review-source">Google recenze</div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-head">
+        <div class="review-avatar">M</div>
+        <div class="review-meta">
+          <div class="review-name">Michal F.</div>
+          <div class="review-date">Google recenze</div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+      </div>
+      <p class="review-text">Je to suprová firma — dodrží slovo a co slíbí, to splní.</p>
+      <div class="review-source">Google recenze</div>
+    </div>
+
+  </div>
+
+  <!-- WRITE REVIEW CTA -->
+  <div class="write-review">
+    <div class="write-review-text">
+      <h3>Byli jste s námi spokojeni?</h3>
+      <p>Vaše hodnocení pomáhá dalším lidem najít spolehlivou stavební firmu. Napište nám pár slov na Google.</p>
+    </div>
+    <a href="https://share.google/qXjQ2tnVvOQXxGoJQ" target="_blank" rel="noopener" class="write-review-btn">Hodnotit na Google →</a>
+  </div>
+
+  <!-- CONTACT FORM -->
+  <div class="form-section" id="poptavka">
+    <p class="form-section-label">Máte projekt?</p>
+    <h2 class="form-section-title">Nezávazná<br>konzultace</h2>
+    <p class="form-section-desc">Napište nám o svém projektu. Ozveme se do 24 hodin a probereme, jak vám můžeme pomoci.</p>
+    <div class="form-wrapper">
+      <iframe data-tally-src="https://tally.so/embed/LZRKEO?alignLeft=1&hideTitle=1&dynamicHeight=1" loading="lazy" width="100%" height="682" frameborder="0" marginheight="0" marginwidth="0" title="Poptávka — Dr. PřiStav"></iframe>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2025 Dr. PřiStav s.r.o. · IČO 11646896 · <a href="index.html">Zpět na web</a></p>
+  <p><a href="tel:+420777301047">+420 777 301 047</a> · <a href="mailto:info@drpristav.cz">info@drpristav.cz</a></p>
+</footer>
+
+</body>
+</html>
