@@ -460,17 +460,18 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
     <button class="ref-btn active" onclick="filterRef('vse',this)">Vše</button>
     <button class="ref-btn" onclick="filterRef('hrube',this)">Hrubé stavby</button>
     <button class="ref-btn" onclick="filterRef('rekonstrukce',this)">Rekonstrukce</button>
-    <button class="ref-btn" onclick="filterRef('fasady',this)">Fasády</button>
     <button class="ref-btn" onclick="filterRef('koupelny',this)">Koupelny</button>
+    <button class="ref-btn" onclick="filterRef('fasady',this)">Fasády</button>
     <button class="ref-btn" onclick="filterRef('instalace',this)">Instalatérské práce</button>
-    <button class="ref-btn" onclick="filterRef('drobne',this)">Drobné práce</button>
+    <button class="ref-btn" onclick="filterRef('pristavba',this)">Přístavba & nástavba</button>
+    <button class="ref-btn" onclick="filterRef('ostatni',this)">Ostatní</button>
   </div>
   <div class="ref-grid">
     <div class="ref-item" data-detail="1" data-cat="hrube" onclick="window.location.href='realizace/mukarov.html'">
       <img src="realizace/mukarov_a.jpg" alt="Hrubá stavba Mukařov" loading="lazy">
       <div class="ref-overlay"><div class="ref-cat">Hrubá stavba</div><div class="ref-name">Mukařov</div><div class="ref-desc">Patrový dvojdům Porotherm — od základů po hotovou fasádu a podlahy</div></div>
     </div>
-    <div class="ref-item" data-detail="1" data-cat="hrube" onclick="window.location.href='realizace/miako-cim.html'">
+    <div class="ref-item" data-detail="1" data-cat="ostatni" onclick="window.location.href='realizace/miako-cim.html'">
       <img src="images/nastavba.jpg" alt="Miako strop, Čím" loading="lazy">
       <div class="ref-overlay"><div class="ref-cat">Strop & podlaha</div><div class="ref-name">Čím</div><div class="ref-desc">Miako strop a iglú podlahy — moderní konstrukční systémy</div></div>
     </div>
@@ -482,9 +483,9 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
       <img src="images/oton_b.jpg" alt="Škvorec" loading="lazy">
       <div class="ref-overlay"><div class="ref-cat">Hrubá stavba</div><div class="ref-name">Škvorec</div><div class="ref-desc">Jednopodlažní bungalov ve výstavbě, kompletní hrubá stavba</div></div>
     </div>
-    <div class="ref-item" data-detail="1" data-cat="hrube" onclick="window.location.href='realizace/senohraby.html'">
+    <div class="ref-item" data-detail="1" data-cat="pristavba" onclick="window.location.href='realizace/senohraby.html'">
       <img src="realizace/senohraby_a.jpg" alt="Přístavba Senhohraby" loading="lazy">
-      <div class="ref-overlay"><div class="ref-cat">Přístavba</div><div class="ref-name">Senohraby</div><div class="ref-desc">Přístavba z ytongu, dřevěné krovy, krytina Lindab</div></div>
+      <div class="ref-overlay"><div class="ref-cat">Přístavba & nástavba</div><div class="ref-name">Senohraby</div><div class="ref-desc">Přístavba z ytongu, dřevěné krovy, krytina Lindab</div></div>
     </div>
     <div class="ref-item" data-cat="hrube" data-detail="1" onclick="window.location.href='realizace/zerhovice.html'">
       <img src="images/zerhovice.jpg" alt="Žerhovice" loading="lazy">
@@ -496,13 +497,13 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
     </div>
     <div class="ref-item" data-cat="rekonstrukce" data-detail="1" onclick="window.location.href='realizace/barrandov-rd.html'">
       <img src="realizace/barrandov-rd_hero.jpg" alt="Rekonstrukce RD Barrandov" loading="lazy">
-      <div class="ref-overlay"><div class="ref-cat">Rekonstrukce & dlažba</div><div class="ref-name">Barrandov</div><div class="ref-desc">Rekonstrukce RD, zámková dlažba vjezdu a kovové oplocení</div></div>
+      <div class="ref-overlay"><div class="ref-cat">Rekonstrukce</div><div class="ref-name">Barrandov</div><div class="ref-desc">Rekonstrukce RD, zámková dlažba vjezdu a kovové oplocení</div></div>
     </div>
     <div class="ref-item" data-detail="1" data-cat="rekonstrukce" onclick="window.location.href='realizace/palmovka.html'">
       <img src="images/palma.jpg" alt="Rekonstrukce Palmovka" loading="lazy">
-      <div class="ref-overlay"><div class="ref-cat">Rekonstrukce bytu</div><div class="ref-name">Palmovka</div><div class="ref-desc">Kompletní rekonstrukce bytu — podlahy, omítky, okna</div></div>
+      <div class="ref-overlay"><div class="ref-cat">Rekonstrukce</div><div class="ref-name">Palmovka</div><div class="ref-desc">Kompletní rekonstrukce bytu — podlahy, omítky, okna</div></div>
     </div>
-    <div class="ref-item" data-cat="rekonstrukce" data-detail="1" onclick="window.location.href='realizace/deinstalace-benesov.html'">
+    <div class="ref-item" data-cat="ostatni" data-detail="1" onclick="window.location.href='realizace/deinstalace-benesov.html'">
       <img src="images/deinstalace.jpg" alt="Demolice střechy" loading="lazy">
       <div class="ref-overlay"><div class="ref-cat">Demolice & rekonstrukce</div><div class="ref-name">Deinstalace střechy</div><div class="ref-desc">Demolice staré střechy, příprava na kompletní rekonstrukci domu</div></div>
     </div>
@@ -510,35 +511,35 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
       <img src="images/tuklaty_hero.jpg" alt="Rekonstrukce Tuklaty" loading="lazy">
       <div class="ref-overlay"><div class="ref-cat">Rekonstrukce</div><div class="ref-name">Tuklaty</div><div class="ref-desc">Kompletní rekonstrukce interiéru rodinného domu</div></div>
     </div>
-    <div class="ref-item" data-cat="rekonstrukce" data-detail="1" onclick="window.location.href='realizace/karlin.html'">
+    <div class="ref-item" data-cat="koupelny" data-detail="1" onclick="window.location.href='realizace/karlin.html'">
       <img src="images/karlin_hero.jpg" alt="Karlín bytové jádro" loading="lazy">
-      <div class="ref-overlay"><div class="ref-cat">Rekonstrukce bytového jádra</div><div class="ref-name">Karlín</div><div class="ref-desc">Kompletní rekonstrukce bytového jádra v Praze Karlín</div></div>
+      <div class="ref-overlay"><div class="ref-cat">Koupelna</div><div class="ref-name">Karlín</div><div class="ref-desc">Kompletní rekonstrukce bytového jádra v Praze Karlín</div></div>
     </div>
     <div class="ref-item" data-cat="koupelny" data-detail="1" onclick="window.location.href='realizace/beroun.html'">
       <img src="images/beroun_hero.jpg" alt="Beroun koupelna" loading="lazy">
-      <div class="ref-overlay"><div class="ref-cat">Koupelna & instalace</div><div class="ref-name">Beroun</div><div class="ref-desc">Instalace bojleru a kompletní dokončení koupelny s obklady</div></div>
+      <div class="ref-overlay"><div class="ref-cat">Koupelna</div><div class="ref-name">Beroun</div><div class="ref-desc">Instalace bojleru a kompletní dokončení koupelny s obklady</div></div>
     </div>
     <div class="ref-item" data-detail="1" data-cat="instalace" onclick="window.location.href='realizace/plzenska-bytovy-dum.html'">
       <img src="images/hunc.jpg" alt="Plzeňská" loading="lazy">
       <div class="ref-overlay"><div class="ref-cat">Instalatérské práce</div><div class="ref-name">Plzeňská</div><div class="ref-desc">Kompletní rozvody kanalizace a vodoinstalace, bytový dům</div></div>
     </div>
-    <div class="ref-item" data-cat="hrube" data-detail="1" onclick="window.location.href='realizace/pocernice-nastavba.html'">
+    <div class="ref-item" data-cat="pristavba" data-detail="1" onclick="window.location.href='realizace/pocernice-nastavba.html'">
       <img src="realizace/pocernice-nastavba_hero.jpg" alt="Nástavba Dolní Počernice" loading="lazy">
-      <div class="ref-overlay"><div class="ref-cat">Nástavba</div><div class="ref-name">Dolní Počernice</div><div class="ref-desc">Nástavba nového patra rodinného domu, zdicí práce</div></div>
+      <div class="ref-overlay"><div class="ref-cat">Přístavba & nástavba</div><div class="ref-name">Dolní Počernice</div><div class="ref-desc">Nástavba nového patra rodinného domu, zdicí práce</div></div>
     </div>
-    <div class="ref-item" data-detail="1" data-cat="drobne" onclick="window.location.href='realizace/frantiskanska-zahrada.html'">
+    <div class="ref-item" data-detail="1" data-cat="ostatni" onclick="window.location.href='realizace/frantiskanska-zahrada.html'">
       <img src="images/koza.jpg" alt="Rekonstrukce vstupu Františkánská zahrada" loading="lazy">
       <div class="ref-overlay"><div class="ref-cat">Venkovní dlažba</div><div class="ref-name">Františkánská zahrada</div><div class="ref-desc">Rekonstrukce vstupu, terrakotová dlažba komerčního objektu</div></div>
     </div>
-    <div class="ref-item" data-detail="1" data-cat="drobne" onclick="window.location.href='realizace/rokytka.html'">
+    <div class="ref-item" data-detail="1" data-cat="ostatni" onclick="window.location.href='realizace/rokytka.html'">
       <img src="images/jascik.jpg" alt="Schodiště Rokytka" loading="lazy">
       <div class="ref-overlay"><div class="ref-cat">Schodiště & dlažba</div><div class="ref-name">Rokytka</div><div class="ref-desc">Nové betonové schodiště a zámková dlažba před domem</div></div>
     </div>
     <div class="ref-item" data-cat="rekonstrukce" data-detail="1" onclick="window.location.href='realizace/roztoky.html'">
       <img src="realizace/roztoky_hero.jpg" alt="Rekonstrukce bytu Roztoky" loading="lazy">
-      <div class="ref-overlay"><div class="ref-cat">Rekonstrukce na klíč</div><div class="ref-name">Roztoky</div><div class="ref-desc">Kompletní rekonstrukce bytu — SDK oblouky, akustické příčky, podlahy</div></div>
+      <div class="ref-overlay"><div class="ref-cat">Rekonstrukce</div><div class="ref-name">Roztoky</div><div class="ref-desc">Kompletní rekonstrukce bytu — SDK oblouky, akustické příčky, podlahy</div></div>
     </div>
-    <div class="ref-item" data-cat="rekonstrukce" data-detail="1" onclick="window.location.href='realizace/douglas.html'">
+    <div class="ref-item" data-cat="ostatni" data-detail="1" onclick="window.location.href='realizace/douglas.html'">
       <img src="realizace/douglas_hero.jpg" alt="Douglas OC Letňany" loading="lazy">
       <div class="ref-overlay"><div class="ref-cat">Sádrokarton</div><div class="ref-name">Douglas Letňany</div><div class="ref-desc">SDK úpravy parfumerie v OC Letňany — noční provoz bez výpadku</div></div>
     </div>
@@ -546,7 +547,7 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
       <img src="realizace/tisice_hero.jpg" alt="Fasáda Tišice" loading="lazy">
       <div class="ref-overlay"><div class="ref-cat">Fasáda & zateplení</div><div class="ref-name">Tišice</div><div class="ref-desc">Zateplení EPS 140 a jednobarevná fasáda Weber</div></div>
     </div>
-    <div class="ref-item" data-cat="rekonstrukce" data-detail="1" onclick="window.location.href='realizace/kancelar-letnany.html'">
+    <div class="ref-item" data-cat="ostatni" data-detail="1" onclick="window.location.href='realizace/kancelar-letnany.html'">
       <img src="realizace/kancelar_hero.jpg" alt="Kancelář Letňany" loading="lazy">
       <div class="ref-overlay"><div class="ref-cat">Rekonstrukce kanceláře</div><div class="ref-name">Praha Letňany</div><div class="ref-desc">Kompletní kancelář na klíč — elektro, podhledy, koberce</div></div>
     </div>
@@ -554,7 +555,7 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
       <img src="realizace/nove-jirny_hero.jpg" alt="Fasáda Nové Jirny" loading="lazy">
       <div class="ref-overlay"><div class="ref-cat">Fasáda & zateplení</div><div class="ref-name">Nové Jirny</div><div class="ref-desc">Variabilní zateplení 30–160 mm, dekorativní prvky</div></div>
     </div>
-    <div class="ref-item" data-cat="drobne" data-detail="1" onclick="window.location.href='realizace/bazen-chrast.html'">
+    <div class="ref-item" data-cat="ostatni" data-detail="1" onclick="window.location.href='realizace/bazen-chrast.html'">
       <img src="realizace/bazen_hotovy.jpg" alt="Bazén Chrást" loading="lazy">
       <div class="ref-overlay"><div class="ref-cat">Bazén na klíč</div><div class="ref-name">Chrást</div><div class="ref-desc">Atypický betonový bazén 10,5×4×2,2 m s technologií</div></div>
     </div>
@@ -562,9 +563,9 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
       <img src="realizace/kosor_hero.jpg" alt="Hrubá stavba Kosoř" loading="lazy">
       <div class="ref-overlay"><div class="ref-cat">Hrubá stavba</div><div class="ref-name">Kosoř</div><div class="ref-desc">248 m² od výkopu po věnce — Blower Door test</div></div>
     </div>
-    <div class="ref-item" data-cat="rekonstrukce" data-detail="1" onclick="window.location.href='realizace/srbin.html'">
+    <div class="ref-item" data-cat="koupelny" data-detail="1" onclick="window.location.href='realizace/srbin.html'">
       <img src="realizace/srbin_hero.jpg" alt="Koupelny Srbín" loading="lazy">
-      <div class="ref-overlay"><div class="ref-cat">Rekonstrukce koupelny</div><div class="ref-name">Srbín</div><div class="ref-desc">4 atypické koupelny v RD s dvěma bytovými jednotkami</div></div>
+      <div class="ref-overlay"><div class="ref-cat">Koupelna</div><div class="ref-name">Srbín</div><div class="ref-desc">4 atypické koupelny v RD s dvěma bytovými jednotkami</div></div>
     </div>
 
     <div class="ref-item" data-cat="rekonstrukce" data-detail="1" onclick="window.location.href='realizace/beroun-kd.html'">
@@ -582,7 +583,7 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
     </div>
     <div class="ref-item" data-cat="rekonstrukce" data-detail="1" onclick="window.location.href='realizace/rekonstrukce-usti.html'">
       <img src="images/usti_hero.jpg" alt="Rekonstrukce bytu Ústí nad Labem" loading="lazy">
-      <div class="ref-overlay"><div class="ref-cat">Rekonstrukce bytu</div><div class="ref-name">Ústí nad Labem</div><div class="ref-desc">Kompletní rekonstrukce bytu na klíč</div></div>
+      <div class="ref-overlay"><div class="ref-cat">Rekonstrukce</div><div class="ref-name">Ústí nad Labem</div><div class="ref-desc">Kompletní rekonstrukce bytu na klíč</div></div>
     </div>
     <div class="ref-item" data-cat="hrube" data-detail="1" onclick="window.location.href='realizace/stavba-melnik.html'">
       <img src="images/melnik_stavba_hero.jpg" alt="Stavba domu Mělník" loading="lazy">
