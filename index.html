@@ -187,6 +187,7 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
   footer{flex-direction:column;gap:16px;padding:24px}
 }
 </style>
+<script async src="https://tally.so/widgets/embed.js"></script>
 </head>
 <body>
 
@@ -721,31 +722,9 @@ footer{background:#141614;padding:32px 72px;display:flex;justify-content:space-b
       </div>
     </div>
   </div>
-  <form class="kontakt-form" name="kontakt" method="POST" data-netlify="true" netlify>
-    <input type="hidden" name="form-name" value="kontakt">
-    <p style="display:none"><label>Nevyplňujte: <input name="bot-field"></label></p>
-    <div class="form-row">
-      <div class="form-group"><label class="form-label" for="jmeno">Jméno</label><input class="form-input" type="text" id="jmeno" name="jmeno" placeholder="Jan Novák" required></div>
-      <div class="form-group"><label class="form-label" for="telefon">Telefon</label><input class="form-input" type="tel" id="telefon" name="telefon" placeholder="+420 000 000 000"></div>
-    </div>
-    <div class="form-group"><label class="form-label" for="email">E-mail</label><input class="form-input" type="email" id="email" name="email" placeholder="jan@example.cz" required></div>
-    <div class="form-group">
-      <label class="form-label" for="sluzba">Typ práce</label>
-      <select class="form-select" id="sluzba" name="sluzba">
-        <option value="">Vyberte typ práce...</option>
-        <option>Hrubá stavba / základové desky</option>
-        <option>Stavba domu na klíč</option>
-        <option>Rekonstrukce na klíč</option>
-        <option>Fasáda &amp; zateplení</option>
-        <option>Sádrokarton &amp; příčky</option>
-        <option>Instalatérské práce</option>
-        <option>Drobné práce</option>
-        <option>Jiné</option>
-      </select>
-    </div>
-    <div class="form-group"><label class="form-label" for="zprava">Popis projektu</label><textarea class="form-textarea" id="zprava" name="zprava" placeholder="Stručně popište projekt — co potřebujete udělat, kde a v jakém rozsahu..."></textarea></div>
-    <button type="submit" class="form-submit">Odeslat poptávku</button>
-  </form>
+  <div class="kontakt-form">
+    <iframe data-tally-src="https://tally.so/embed/LZRKEO?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="682" frameborder="0" marginheight="0" marginwidth="0" title="Poptávka — Dr. PřiStav"></iframe>
+  </div>
 </section>
 
 <!-- PARTNEŘI -->
